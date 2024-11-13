@@ -1,22 +1,13 @@
 import React, { useEffect, useState } from "react";
-import TimeBox from "./adv_components/TimeBox";
+import { clsx } from "clsx";
+import Programs from "./Programs";
+import Offer from "./Offer";
 
 function NavBar() {
+	const [programsHidden, setProgramsHidden] = useState(true);
 	return (
 		<div className=" w-screen fixed top-0 left-0 right-0">
-			<div className=" w-full bg-[#2df8c5] ">
-				<div className=" flex justify-center items-center flex-grow gap-6 text-center max-md:flex-col max-md:gap-0">
-					<p className=" text-center text-lg max-md:text-xs">
-						Land your dream tech role with Crio.Do | Grab scholarship of up to
-						<span className=" font-bold">
-							{" "}
-							₹1,20,000 | 73 Seats |{" "}
-							<span className=" underline">Apply Now</span> |
-						</span>
-					</p>
-					<TimeBox />
-				</div>
-			</div>
+			<Offer />
 			<div className=" w-full bg-white p-2 flex justify-between items-center">
 				<img
 					src="https://www.crio.do/static/5ac1a39f9eebf6fe904e14069500353e/2d604/Crio_Dark.webp"
@@ -25,11 +16,21 @@ function NavBar() {
 				/>
 				<div>
 					<ul className=" flex justify-between gap-4 mr-4">
-						<li>Programs</li>
-						<li>Hire From CRIO</li>
+						<li>
+							<div
+								onMouseEnter={() => setProgramsHidden(false)}
+								onMouseLeave={() => setProgramsHidden(true)}
+							>
+								Programs &#9660;
+							</div>
+							<div className={clsx({ hidden: programsHidden },"absolute ")}>
+								<Programs />
+							</div>
+						</li>
+						<li>Hire from CRIO</li> 
 						<li>Projects</li>
 						<li>Blog</li>
-						<li>Placements</li>
+						<li>Placements &#9660;</li>
 						<li>Sign-In</li>
 					</ul>
 				</div>
