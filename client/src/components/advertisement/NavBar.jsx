@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import { clsx } from "clsx";
 import Programs from "./Programs";
 import Offer from "./Offer";
+import Placements from "./Placements";
 
 function NavBar() {
 	const [programsHidden, setProgramsHidden] = useState(true);
+	const [placementsHidden, setPlacementsHidden] = useState(false);
 	return (
 		<div className=" w-screen fixed top-0 left-0 right-0">
 			<Offer />
@@ -16,22 +18,42 @@ function NavBar() {
 				/>
 				<div>
 					<ul className=" flex justify-between gap-4 mr-4">
-						<li>
+						<li className="p-1">
 							<div
-								onMouseEnter={() => setProgramsHidden(false)}
-								onMouseLeave={() => setProgramsHidden(true)}
+								onMouseEnter={() => setProgramsHidden(true)}
+								onMouseLeave={() => setProgramsHidden(false)}
 							>
 								Programs &#9660;
-							</div>
-							<div className={clsx({ hidden: programsHidden },"absolute ")}>
-								<Programs />
+								<div
+									className={clsx({ hidden: programsHidden }, "absolute top-8")}
+								>
+									<Programs />
+								</div>
 							</div>
 						</li>
-						<li>Hire from CRIO</li> 
-						<li>Projects</li>
-						<li>Blog</li>
-						<li>Placements &#9660;</li>
-						<li>Sign-In</li>
+						<li className="p-1">Hire from CRIO</li>
+						<li className="p-1">Projects</li>
+						<li className="p-1">Blog</li>
+						<li className="p-1">
+							<div
+								className=" relative"
+								onMouseEnter={() => setPlacementsHidden(false)}
+								onMouseLeave={() => setPlacementsHidden(true)}
+							>
+								Placements &#9660;
+								<div
+									className={clsx(
+										{ hidden: placementsHidden },
+										"absolute -right-20 w-80 top-8"
+									)}
+								>
+									<Placements />
+								</div>
+							</div>
+						</li>
+						<li className=" border-2 py-1 px-4 border-black rounded-lg">
+							Sign-In &#9655;
+						</li>
 					</ul>
 				</div>
 			</div>
