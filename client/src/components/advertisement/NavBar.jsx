@@ -6,7 +6,7 @@ import Placements from "./Placements";
 
 function NavBar() {
 	const [programsHidden, setProgramsHidden] = useState(true);
-	const [placementsHidden, setPlacementsHidden] = useState(false);
+	const [placementsHidden, setPlacementsHidden] = useState(true);
 	return (
 		<div className=" w-screen fixed top-0 left-0 right-0">
 			<Offer />
@@ -20,12 +20,16 @@ function NavBar() {
 					<ul className=" flex justify-between gap-4 mr-4">
 						<li className="p-1">
 							<div
-								onMouseEnter={() => setProgramsHidden(true)}
-								onMouseLeave={() => setProgramsHidden(false)}
+								className=" relative"
+								onMouseEnter={() => setProgramsHidden(false)}
+								onMouseLeave={() => setProgramsHidden(true)}
 							>
 								Programs &#9660;
 								<div
-									className={clsx({ hidden: programsHidden }, "absolute top-8")}
+									className={clsx(
+										{ hidden: programsHidden },
+										"absolute top-8 -left-64 -right-64"
+									)}
 								>
 									<Programs />
 								</div>
@@ -44,7 +48,7 @@ function NavBar() {
 								<div
 									className={clsx(
 										{ hidden: placementsHidden },
-										"absolute -right-20 w-80 top-8"
+										"absolute -left-40 -right-40  top-8"
 									)}
 								>
 									<Placements />
