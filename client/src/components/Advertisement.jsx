@@ -1,10 +1,20 @@
 import React from "react";
 import NavBar from "./advertisement/NavBar";
+import Hero from "./advertisement/Hero";
+import Contacts from "./advertisement/Contacts";
 
 function Advertisement() {
 	return (
 		<div>
 			<NavBar />
+			<div className=" grid grid-cols-10">
+				<div className=" col-span-6">
+					<Hero />
+				</div>
+				<div className=" col-span-4">
+					<Contacts />
+				</div>
+			</div>
 		</div>
 	);
 }
