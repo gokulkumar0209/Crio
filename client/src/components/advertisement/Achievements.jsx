@@ -1,4 +1,5 @@
 import React from "react";
+import { clsx } from "clsx";
 
 function Achievements() {
 	const achievements = [
@@ -25,13 +26,16 @@ function Achievements() {
 	];
 
 	return (
-		<div className="my-4">
-			<div className=" w-full  border-2 grid grid-cols-5 text-center justify-between my-2 rounded-lg">
-				{achievements.map((achievement) => {
+		<div className="my-4 bg-[#f2fbf7] rounded-3xl">
+			<div className=" w-full  grid grid-cols-5 text-center justify-between my-2 rounded-lg">
+				{achievements.map((achievement, index) => {
 					return (
-						<div className="p-2 border">
-							<div className=" text-xl font-bold">{achievement.value}</div>
-							<div className="text-sm text-gray-500 text-center px-2">
+						<div
+							className={clsx(index != 0 && " border-l", "py-4 px-0")}
+							key={index}
+						>
+							<div className=" text-2xl font-bold">{achievement.value}</div>
+							<div className="text-xs  text-center px-2">
 								{achievement.description}
 							</div>
 						</div>

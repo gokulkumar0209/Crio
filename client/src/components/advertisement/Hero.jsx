@@ -1,10 +1,10 @@
 import React from "react";
 import Play_Button from "./adv_components/Play_Button";
-import Achievements from "./adv_components/Achievements";
+import Achievements from "./Achievements";
 
 function Hero() {
 	return (
-		<div className=" mt-24 mx-8 bg-yellow-50">
+		<div className=" mt-24 mx-8 ">
 			<h1 className=" capitalize text-5xl  py-10 leading-snug font-bold">
 				Learn Like you would <br /> at India's top tech <br /> companies.
 			</h1>
