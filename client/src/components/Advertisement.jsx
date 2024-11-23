@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "./advertisement/NavBar";
 import Hero from "./advertisement/Hero";
 import Contacts from "./advertisement/Contacts";
+import About from "./advertisement/About";
 
 function Advertisement() {
 	return (
@@ -15,6 +16,7 @@ function Advertisement() {
 					<Contacts />
 				</div>
 			</div>
+			<About/>
 		</div>
 	);
 }
