@@ -1,53 +1,92 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import {
+	faEnvelope,
+	faHeadset,
+	faHouse,
+} from "@fortawesome/free-solid-svg-icons";
 
 function About() {
 	return (
-		<div className="bg-[#2df8c5]">
-			<div className="   mx-8">
-				<div className=" col-span-4">
+		<div className="bg-[#2df8c5] px-8 py-8">
+			<div className=" ">
+				<div className=" col-span-4 text-lg">
 					<img
 						src="https://www.crio.do/static/5ac1a39f9eebf6fe904e14069500353e/2d604/Crio_Dark.webp"
 						alt=""
-						className=" w-32 max-md:w-24 "
+						className=" w-48"
 					/>
-					<div>
-						<p className="mt-4">
-							<span>
-								<FontAwesomeIcon icon={faHouse} size="" className=" inline" />
-							</span>{" "}
+
+					<div className=" flex mt-4 items-start font-medium ">
+						<FontAwesomeIcon icon={faHouse} size="lg" className="mt-1" />
+						<p className="ml-2">
 							20, 100 Feet Rd, Vivek Nagar, Chandra Reddy Layout, AVS Layout
 							Ejipura, Bengaluru, Karnataka 560095
 						</p>
 					</div>
-					<p>Customer Queries support@criodo.com</p>
+
+					<div className=" flex mt-4 items-start font-medium">
+						<FontAwesomeIcon icon={faEnvelope} size="lg" className="mt-1" />
+						<p className="ml-2">
+							<span className=" font-semibold">Customer Queries</span>
+							<br />
+							<a className=" underline" href="mailto:support@criodo.com">
+								support@criodo.com
+							</a>
+						</p>
+					</div>
+
+					<div className=" flex mt-4 items-start font-medium">
+						<FontAwesomeIcon icon={faHeadset} size="lg" className="mt-1" />
+						<p className="ml-2">
+							<span className=" font-semibold">General Enquiries </span>
+							<br />
+							<span className=" underline">ping@criodo.com</span> <br />
+							<span className=" font-mono">Ph. 063665 28148</span>
+						</p>
+					</div>
+				</div>
+				<div className="mt-6 col-span-2 text-lg">
+					<h3 className=" font-semibold uppercase "> Community Programs</h3>
 					<p>
-						<span>
-							<faFontAwesome></faFontAwesome>
-						</span>{" "}
-						General Enquiries ping@criodo.com Ph. 063665 28148
+						#IBelieveInDoing Challenge <br /> Crio Winter of Doing <br />
+						Crio Project Hub
 					</p>
 				</div>
-				<div className=" bg-violet-500 col-span-2">
-					<h3>Community Programs</h3>
+				<div className="  col-span-4 mt-6 text-lg ">
+					<h3 className=" font-semibold uppercase">Career Programs</h3>
 					<p>
-						#IBelieveInDoing Challenge Crio Winter of Doing Crio Project Hub
+						Fellowship Program in Software Development <br />
+						Fellowship Program in QA Automation (SDET) <br />
+						Fellowship Program in NextGen Data Analytics with AI <br />
+						Fellowship Program In System Design
 					</p>
 				</div>
-				<div className=" bg-red-500 col-span-4">
-					<h3>Career Programs</h3>
+				<div className=" mt-6 text-lg">
+					<h3 className=" font-semibold uppercase">For Business</h3>
 					<p>
-						Fellowship Program in Software Development
-						<p>Fellowship Program in QA Automation (SDET)</p> Fellowship Program
-						in NextGen Data Analytics with AI Fellowship Program In System
-						Design
+						Hire from Crio <br />
+						Crio Onboard
 					</p>
-					<div>For Business Hire from Crio Crio Onboard</div>
 				</div>
-				<div className=" bg-green-500 col-span-2">
-					Crio Placement Report Success Stories About Blog Terms of Use Privacy
-					Policy
+				<div className=" col-span-2 text-lg mt-6">
+					<h3 className=" font-semibold uppercase">Crio</h3>
+					<p>
+						Placement Report <br /> Success Stories <br /> About <br /> Blog
+						<br /> Terms of Use <br />
+						Privacy Policy
+					</p>
+				</div>
+			</div>
+			<hr className=" border-[1px] border-[#02bf91] mt-6" />
+			<div className="  rounded-sm">
+				<div className=" bg-black inline">
+					{/* <FontAwesomeIcon
+						icon={faLinkedin}
+						size="2x"
+						className="  bg-white text-black align-middle  "
+					/> */}
 				</div>
 			</div>
 		</div>
