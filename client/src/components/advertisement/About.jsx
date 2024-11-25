@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faYoutube, faInstagram, faTwitter  , faFacebookSquare} from "@fortawesome/free-brands-svg-icons";
 import {
 	faEnvelope,
 	faHeadset,
@@ -81,12 +81,32 @@ function About() {
 			</div>
 			<hr className=" border-[1px] border-[#02bf91] mt-6" />
 			<div className="  rounded-sm">
-				<div className=" bg-black inline">
-					{/* <FontAwesomeIcon
+				<div className=" flex">
+					<FontAwesomeIcon
 						icon={faLinkedin}
 						size="2x"
-						className="  bg-white text-black align-middle  "
-					/> */}
+						className=" text-white bg-black p-2"
+					/>
+					<FontAwesomeIcon
+						icon={faYoutube}
+						size="2x"
+						className=" text-white bg-black p-2"
+					/>
+					<FontAwesomeIcon
+						icon={faInstagram}
+						className=" text-white bg-black p-2"
+						size="2x"
+					/>
+					<FontAwesomeIcon
+						icon={faTwitter}
+						size="2x"
+						className=" text-white bg-black p-2"
+					/>
+					<FontAwesomeIcon
+						icon={faFacebookSquare}
+						size="2x"
+						className=" text-white bg-black p-2"
+					/>
 				</div>
 			</div>
 		</div>
